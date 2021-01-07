@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
+
+.world-image {
+    background-image: url("world.png");
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+.flex-item {
+    background-color: #FA8334;
+    border-radius: 25px;
+    color: #2C6977;
+}
+
+.card {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: #FA8334;
+    color: #2C6977;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: #2C6977;
+    color: #FA8334;
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.flex-item:hover {
+    background-color: #2C6977;
+    color: #FA8334;
+}
+
+.card{
+    /*perspective: 100px;*/
+}
+
+p {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+}
